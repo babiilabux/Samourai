@@ -4,7 +4,7 @@ import personnages.principaux.Commerçant;
 import personnages.Humain;
 
 public class Traitre extends Samourai{
-	int traitrise;
+	double traitrise;
 	
 	public Traitre(String blaze, String alcoolPref, int bourse, String seigneur) {
 		super(blaze, alcoolPref, bourse, seigneur);
@@ -30,11 +30,16 @@ public class Traitre extends Samourai{
 		
 	}
 	
-	
 	public void faireLeGentil(Humain h, int montant) {
-		parler("Voici " + montant + " kokus " + h.getname());
+		parler("Faisons ami-ami" + h.getname());
 		h.parler("Merci " + getname());
 		perdreArgent(montant);
+		double newtraitrise = (traitrise * 0.9);
+		if (newtraitrise < 0) {
+			traitrise = 0;
+		} else {
+			traitrise = newtraitrise;
+		}
 	}
 	
 }
