@@ -1,15 +1,18 @@
 package histoires;
 
 import personnages.Humain;
+import personnages.principaux.Yakuza;
+import personnages.principaux.Commerçant;
+import personnages.principaux.Ronin;
+import personnages.principaux.Samourai;
+import personnages.secondaires.Traitre;
+
 
 public class MonHistoire {
 	public static void main(String[] args) {
-		System.out.println("hello world");
 		
-		Humain h1 = new Humain("Kenji", "sakeaveclesdeuxsabresdansledos", 1000); 
-		
-		String parlerh1 = h1.parler("je vends des sushis et j'ai plein de dettes");
-		
-		System.out.println(parlerh1);
+		  Traitre t = new Traitre("Itachi", "thé", 10, "Sasuke");
+		  t.bonjour();
+
 	}
 }
