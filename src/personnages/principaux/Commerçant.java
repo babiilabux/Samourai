@@ -7,7 +7,7 @@ public class Commerçant extends Humain {
 		super(blaze, "thé", bourse);
 	}
 	
-	public int seFaireExtroquer() {
+	public int seFaireExtorquer() {
 		parler("Le monde est vraiment trop injuste !!");
 		perdreArgent(getbourse()); // getbourse représente la quantité totale de la bourse du commerçant 
 		return getbourse();

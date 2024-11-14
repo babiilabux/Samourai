@@ -22,6 +22,7 @@ public class Yakuza extends Humain {
 	public void extorquer(Commerçant c) {
 		parler("Je t'attaque " + c.getname() + " mwahahaha !");
 		gagnerArgent(c.getbourse());
+		c.seFaireExtorquer();
 		reputation += 1;
 	}
 	
